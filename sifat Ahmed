@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Pakhi ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+margin-top:20px;
+font-size:40px;
+color:#ff4d6d;
+}
+
+.slider{
+width:90%;
+max-width:400px;
+margin:25px auto;
+}
+
+.slider img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 20px pink;
+animation:fade 16s infinite;
+position:absolute;
+left:0;
+right:0;
+margin:auto;
+opacity:0;
+}
+
+.slider img:nth-child(1){animation-delay:0s;}
+.slider img:nth-child(2){animation-delay:4s;}
+.slider img:nth-child(3){animation-delay:8s;}
+.slider img:nth-child(4){animation-delay:12s;}
+
+@keyframes fade{
+0%{opacity:0;}
+10%{opacity:1;}
+25%{opacity:1;}
+35%{opacity:0;}
+100%{opacity:0;}
+}
+
+.message{
+margin-top:520px;
+padding:20px;
+font-size:22px;
+line-height:40px;
+}
+
+button{
+margin-top:30px;
+padding:18px 40px;
+font-size:22px;
+background:#ff0066;
+border:none;
+border-radius:50px;
+color:white;
+cursor:pointer;
+}
+
+#final{
+display:none;
+margin-top:80px;
+font-size:35px;
+color:pink;
+animation:zoom 1.5s infinite;
+}
+
+@keyframes zoom{
+50%{
+transform:scale(1.1);
+}
+}
+
+.heart{
+position:fixed;
+color:red;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+}
+100%{
+transform:translateY(100vh);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>For My Pakhi ❤️</h1>
+
+<div class="slider">
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+</div>
+
+<div class="message">
+পাখি, 💗💗<br><br>
+
+তুমি আমার জীবনের সেই আলো,<br>
+যা অন্ধকার দূর করে মনের মাঝে সুখ এনে দেয়।<br><br>
+
+তোমার এই ভালোবাসা নিয়েই আমি<br>
+সারাজীবন বেঁচে থাকতে চাই। ☺️❤️
+</div>
+
+<button onclick="showLove()">Click Here ❤️</button>
+
+<div id="final">
+💍<br><br>
+
+Will You Stay With Me Forever? ❤️<br><br>
+
+I Love You Pakhi 💗
+</div>
+
+<audio autoplay loop>
+<source src="music.mp3">
+</audio>
+
+<script>
+
+function showLove(){
+document.getElementById("final").style.display="block";
+}
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+},250);
+
+</script>
+
+</body>
+</html>
